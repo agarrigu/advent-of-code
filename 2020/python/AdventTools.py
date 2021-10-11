@@ -1,4 +1,4 @@
-class AdventTools:
+class ReadInput:
 
     @staticmethod
     def inputToString():
@@ -6,6 +6,7 @@ class AdventTools:
             input = file.read()
         return input
 
+    @staticmethod
     def inputToInt():
         with open('input.txt', 'r') as file:
             input = file.read()
