@@ -33,10 +33,7 @@ class Password:
 
 
 def convertStringToPassword(string):
-    min = re.search('^\d+', string).group()
-    max = re.search('-\d+', string).group().strip('-') # bit messy
-    letter = re.search('\s\w{1}:', string).group().strip(': ') # bit messy
-    password = re.search('\w+$', string).group()
+    min, max, letter, password = re.search(r'(\d+)-(\d+) (\w): (\w+)', string).groups()
     return Password(int(min), int(max), letter, password)
 
 
