@@ -26,11 +26,11 @@ class ReadInput:
 
 
 def main():
-    a = AdventTools.inputToString()
-    b = AdventTools.inputToStrList()
-    c = AdventTools.inputToIntLIst()
-    d = AdventTools.inputToInt()
-    print(type(a), type(b),type(c),type(d))
+    a = ReadInput.inputToString()
+    b = ReadInput.inputToStrList()
+    c = ReadInput.inputToIntLIst()
+    d = ReadInput.inputToInt()
+    print(type(a), type(b), type(c), type(d))
 
 
 if __name__ == "__main__":
