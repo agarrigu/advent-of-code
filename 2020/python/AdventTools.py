@@ -1,3 +1,6 @@
+from multipledispatch import dispatch
+
+
 class ReadInput:
 
     @staticmethod
@@ -13,9 +16,17 @@ class ReadInput:
         return int(input)
 
     @staticmethod
+    @dispatch()
     def inputToStrList():
         with open('input.txt', 'r') as file:
             input = file.read().splitlines()
+        return input
+
+    @staticmethod
+    @dispatch(str)
+    def inputToStrList(separator):
+        with open('input.txt', 'r') as file:
+            input = file.read().split(separator)
         return input
 
     @staticmethod
@@ -26,11 +37,12 @@ class ReadInput:
 
 
 def main():
-    a = ReadInput.inputToString()
-    b = ReadInput.inputToStrList()
-    c = ReadInput.inputToIntLIst()
-    d = ReadInput.inputToInt()
-    print(type(a), type(b), type(c), type(d))
+#    a = ReadInput.inputToString()
+#    b = ReadInput.inputToStrList()
+#    c = ReadInput.inputToIntLIst()
+#    d = ReadInput.inputToInt()
+    e = ReadInput.inputToStrList('\n\n')
+    print(e)
 
 
 if __name__ == "__main__":
