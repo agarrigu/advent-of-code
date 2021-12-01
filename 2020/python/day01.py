@@ -8,6 +8,10 @@ def findSum2020(list):
                 return [i, j]
 
 
+def findSum2020Part1(list):
+
+
+
 def findSumThree2020(list):
     for i in list:
         for j in list:

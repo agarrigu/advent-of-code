@@ -9,7 +9,7 @@ class Password:
         self.letter = letter
         self.password = password
 
-    def isValidPassword(self):
+    def isValidPasswordPart1(self):
         if (self.min <= self.password.count(self.letter) <= self.max):
             return True
         return False
@@ -37,26 +37,23 @@ def convertStringToPassword(string):
     return Password(int(min), int(max), letter, password)
 
 
+def solveProblem(input, validationMethod):
+    validPasswords = 0
+    for n in input:
+        if (convertStringToPassword(n).validationMethod()):
+            validPasswords += 1
+    return validPasswords
+
+
 input = AdventTools.ReadInput.inputToStrList()
 
 
-# TODO a() and b() are practically the same, make function
 def a():
-    validPasswords = 0
-    for n in input:
-        if (convertStringToPassword(n).isValidPassword()):
-            validPasswords += 1
-    output = validPasswords
-    return output
+    return solveProblem(input, Password.isValidPasswordPart1)
 
 
 def b():
-    validPasswords = 0
-    for n in input:
-        if (convertStringToPassword(n).isValidPasswordPart2()):
-            validPasswords += 1
-    output = validPasswords
-    return output
+    return solveProblem(input, Password.isValidPasswordPart2)
 
 
 def main():
