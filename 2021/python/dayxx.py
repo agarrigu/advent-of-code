@@ -1,6 +1,6 @@
 import AdventTools
 
-input = AdventTools.ReadInput.inputToStringList('\n')
+input = AdventTools.ReadInput.inputToStrList('\n')
 
 
 def a():

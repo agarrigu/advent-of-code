@@ -1,6 +1,3 @@
-from multipledispatch import dispatch
-
-
 class ReadInput:
 
     @staticmethod

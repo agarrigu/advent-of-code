@@ -12,8 +12,7 @@ def a():
     for i in range(mag):
         mask = pow(2, i)
         count = sum(w & mask == mask for w in input)
-        if count > size/2:
-            gamma += mask
+        gamma += mask if count > size/2 else 0
     epsilon = gamma ^ 0xFFF
     # Need to find a dynamic way to get 0xFFF
     return gamma * epsilon
