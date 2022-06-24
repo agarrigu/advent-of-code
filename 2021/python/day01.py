@@ -1,3 +1,9 @@
+'''
+Given input like `192\n208\n200\n243\n` where each element is a measurment:
+Part 1: How many measurements are larger than the previous measurement?
+Part 2: Considering the sums of a three-measurement sliding window:
+    How many sums are larger than the previous sum?
+'''
 import AdventTools
 
 input = AdventTools.ReadInput.inputToIntLIst()
