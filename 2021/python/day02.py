@@ -1,3 +1,10 @@
+'''
+Given input as {forward|down|up n} where each element is a change in possition:
+Part 1: What do you get if you multiply your final horizontal position by your final depth?
+Part 2: Where `down n` and `up n` is a chnage in aim and 
+`forward n` is horizontal direction and `forward n` * aim is depth:
+    What do you get if you multiply your final horizontal position by your final depth?
+'''
 import AdventTools
 
 input = AdventTools.ReadInput.inputToStrList('\n')
