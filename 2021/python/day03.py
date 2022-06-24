@@ -1,3 +1,13 @@
+'''
+Given input like `11001\n00101\n10010`:
+Part 1: Where gamma rate is the most common bit in each column and epsilon epsilon the least,
+and power cosumption = gamma rate * epsilon rate;
+    What is the power consumption of the submarine?
+Part 2: Where oxygen rating is all the numbers remaining after the most common bit in the nth column
+(tie is 1) until only one remains, co2 rating is the same but least common bit, 
+and life support is oxygen rting * co2 rating;
+    What is the life support rating of the submarine?
+'''
 import AdventTools
 
 input = AdventTools.ReadInput.inputToStrList('\n')
